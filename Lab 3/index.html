@@ -1,0 +1,179 @@
+<html>
+
+<head> <!-- Link to StyleSheet-->
+    <link href="StyleSheet.css" rel="stylesheet">
+</head>
+
+<body>
+
+        <!-- HEADER -->
+            <div id="header">
+                <h1><b>Computer Engineering Technology - Web Programming - Lab 3 - index.html</b></h1>
+                <div id="menu">
+                    <h2><a href="index.html">index</a> <a href="Multimedia.html">Multimedia</a></h2>
+                </div>
+            </div>
+            
+        <!-- CONTENT -->
+            <div id="content">
+                <ol>
+                    <li><b>Class Selection Syntax:</b>
+                        <ul>
+                            <li>Syntax:
+                                <xmp>
+                                    <style>
+                                        .first {
+                                            font-style: italic;
+                                            color: brown;
+                                        }
+                                    </style>
+                                </xmp>
+                            </li>
+                            <li>Output:
+                                <div id="comment" class="first">
+                                    <p><b>Reviews</b></p>
+                                    <p>By Spencer on <time>June 1, 2022</time></p>
+                                </div>
+                                <p>I love central park</p>
+                            </li>
+                        </ul>
+                        <hr>
+                    </li>
+                </ol>
+
+                <ol>
+                    <li><b>Id Selectors Syntax:</b>
+                        <ul>
+                            <li>Syntax:
+                            <xmp>
+                                <Style>
+                                    #latestComment {
+                                        font-style: italic;
+                                        color: blue;
+                                    }
+                                </Style>
+                            </xmp>
+                            </li>
+                    
+                            <li>Output:
+                                <div id="latestComment">
+                                    <p>By Spencer on <time>June 1, 2022</time></p>
+                                    <p>I love central park</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <hr>
+                    </li>
+                </ol>
+                
+                <ol>
+                    <li><b>Style Rule of Attribute Selection:</b>
+                        <ul>
+                            <li>Syntax:
+                                <xmp>
+                                    <style>
+                                        [title] {
+                                            cursor: help;
+                                            padding-bottom: 3px;
+                                            border-bottom: 2px;
+                                            text-decoration: none;
+                                        }
+                                    </style>
+                                </xmp>
+                            </li>
+
+                            <li class="">Output:
+                                <br>
+                                <img src="http://en.wikipedia.org/wiki/Special:FilePath/Flag_of_Canada_(Pantone).svg" title="Canadian Flag" class="second">
+                                
+                            </li>
+                        </ul>
+                        <hr>
+                    </li>
+                </ol>
+
+                <ol>
+                    <li><b>Style Rule of Pseudo Selector:</b></li>
+                    <ul>
+                        <li>Syntax: 
+                            <xmp>
+                                <style>
+                                    a:link {
+                                        text-decoration: underline;
+                                        color: blue;
+                                    }
+
+                                    a:visited {
+                                        text-decoration: underline;
+                                        color: purple;
+                                    }
+
+                                    a:hover {
+                                        text-decoration: none;
+                                        font-weight: bold;
+                                    }
+
+                                    a:active {
+                                        background-color: yellow;
+                                    }
+                                </style>
+                            </xmp>
+                        </li>Output:
+                            <p>Links are an important part of any web page. To learn more about links vist the <a href="https://www.w3.org">W3C</a> website.</p>
+
+                            <nav>
+                                <ul>
+                                    <li><a href="https://en.wikipedia.org/wiki/Canada">Canada</a></li>
+                                    <li><a href="https://en.wikipedia.org/wiki/Germany">Germany</a></li>
+                                    <li><a href="https://en.wikipedia.org/wiki/United_States">United States</a></li>
+                                </ul>
+                            </nav>
+                        <li>
+
+                        </li>
+                    </ul>
+                    <br>
+                </ol>
+
+                <ol>
+                    <li><b>Style Rule of Contextual Selector:</b></li>
+                    <ul>
+                        <li>Syntax:
+                            <xmp>
+                                <style>
+                                    #main div p:first-child {
+                                        color: green;
+                                    }
+
+                                    #main time {
+                                        color: red;
+                                    }
+                                </style>
+                            </xmp>
+                        </li>
+
+                        <li>Output:
+                            <br>
+                            <time>June 1, 2022</time>
+
+                           <div>
+                               <p>I love central park.</p>
+                               <p>I love national park.</p>
+                           </div>
+                        </li>
+                    </ul>
+                    <hr>
+                </ol>
+            </div>
+            
+        <!-- FOOTER -->
+            <div id="footer">
+                <p>[041029720]</p>
+                <p>Spencer</p>
+                <p>LaBrie</p>
+                <p>labr0147@algonquinlive.com</p>
+            </div>
+       
+</body>
+
+</html>

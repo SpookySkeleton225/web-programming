@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Some code and formatting contributed by Professor Rejual. Thank you. -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- PopperJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Compiled Javascript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="jumbotron text-center">
+    <h1><b>Home page of assignment 1</b></h1>
+  </div>
+
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">index.html</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Fibonacci.html">Fibonacci.html</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pattern.html">Pattern.html</a>
+    </li>
+  </ul>
+
+  <div class="col-md-9">
+
+
+    <h3>This old man:</h3>
+    <script>
+      var line = 1;
+      var message = "";
+      var endOfFile = false;
+      while (!endOfFile) {
+        if (line <= 10) {
+          message += "This old man, he had " + line + "." + "<br>";
+
+          switch (line) {
+            case 1:
+              message += "He played knick-knack on my thumb." + "<br>";
+              line++;
+              break;
+            case 2:
+              message += "He played knick-knack on my shoe." + "<br>";
+              line++;
+              break;
+            case 3:
+              message += "He played knick-knack on my knee." + "<br>";
+              line++;
+              break;
+            case 4:
+              message += "He played knick-knack on my door." + "<br>";
+              line++;
+              break;
+            case 5:
+              message += "He played knick-knack on my hive." + "<br>";
+              line++;
+              break;
+            case 6:
+              message += "He played knick-knack on my sticks." + "<br>";
+              line++;
+              break;
+            case 7:
+              message += "He played knick-knack on my heaven." + "<br>";
+              line++;
+              break;
+            case 8:
+              message += "He played knick-knack on my gate." + "<br>";
+              line++;
+              break;
+            case 9:
+              message += "He played knick-knack on my spine." + "<br>";
+              line++;
+              break;
+            case 10:
+              message += "He played knick-knack on my shin." + "<br>";
+              line++;
+              break;
+          }
+        } else {
+          message += "With a knick-knack, paddy whack," + "<br>" + "Give your dog a bone." + "<br>" + "This old man came rolling home.";
+          endOfFile = true;
+          document.write(message);
+        }
+        message + "With a knick-knack paddy whack,\n give your dog a bone.\n This old man came rolling home."
+      }
+    </script>
+  </div>
+
+  <div class="jumbotron text-center" style="margin-bottom:0">
+    <p>Footer</p>
+    <p>[041029720]</p>
+    <p>Spencer</p>
+    <p>LaBrie</p>
+    <p>labr0147@algonquinlive.com</p>
+  </div>
+
+</body>
+
+</html>

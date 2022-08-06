@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Some code and formatting contributed by Professor Rejual. Thank you. -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- PopperJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Compiled Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        /*
+        Code works by making the third variable the first variable plus the second. 
+        Then variable 1 becomes 2 and 2 becomes three, continues untill end of for loop.
+        */
+        function Fibbonacci() {
+            var a1 = 0
+            var a2 = 1;
+            var a3;
+            var message = "fib(0) = 0<br>" + "fib(1) = 1<br>";
+            var correctInput = false;
+
+            while (!correctInput) {
+                count = prompt("Please enter the count of the fibbonaci numbers: ");
+                if (count == NaN) {
+                    alert("Please enter a valid character");
+                } else if (count <= 0) {
+                    alert("Number cannot be less than 0");
+                }
+                correctInput = true;
+            }
+
+            if (count <= 10) {
+                for (let x = 2; x < count; x++) {
+                    a3 = a1 + a2;
+                    message += "fib(" + (x + 1) + ")" + " = " + a3 + "<br>";
+                    a1 = a2;
+                    a2 = a3;
+                }
+            } else if (count >= 10) {
+                for (let x = 2; x <= count; x++) {
+                    a3 = a1 + a2;
+                    message += "fib(" + x + ")" + " = " + a3 + "<br>";
+                    a1 = a2;
+                    a2 = a3;
+                }
+            }
+
+
+
+            return message;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <h1><b>Fibbonacci Generator:</b></h1>
+    </div>
+
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">index.html</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Fibonacci.html">Fibonacci.html</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="pattern.html">Pattern.html</a>
+        </li>
+    </ul>
+
+    <div class="col-md-9">
+        <script type="text/javascript">
+            document.write(Fibbonacci());
+        </script>
+    </div>
+
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <p>Footer</p>
+        <p>[041029720]</p>
+        <p>Spencer</p>
+        <p>LaBrie</p>
+        <p>labr0147@algonquinlive.com</p>
+    </div>
+
+</body>
+
+</html>

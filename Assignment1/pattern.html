@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Some code and formatting contributed by Professor Rejual. Thank you. -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- PopperJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Compiled Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        /*
+        Runs to verifiy input by checking that it is not a Not a Number or that it is not less than 0 or 0.
+        */
+        function pickShape() {
+            var correctInput = false;
+            while (!correctInput) {
+                var userInput = 0;
+                userInput = prompt("Please select the pattern you want to draw (1:Triangle, 2:Diamond, 3:Hollow-Rectangle)");
+
+                if (userInput == NaN) {
+                    alert("Please enter a number");
+                } else if (userInput == 1) {
+                    triangle();
+                    correctInput = true;
+                } else if (userInput == 2) {
+                    return diamond();
+                    correctInput = true;
+                } else if (userInput == 3) {
+                    return hollowRectangle();
+                    correctInput = true;
+                } else {
+                    alert("Please enter a valid choice")
+                }
+            }
+        }
+
+
+        function triangle() {
+            /*  some code adapted from 
+            *   Java program to Print Right Triangle Star Pattern. 
+                GeeksforGeeks. (2021, March 9). Retrieved June 10, 2022, 
+                from https://www.geeksforgeeks.org/java-program-to-print-right-triangle-star-pattern/
+                The first loop determines the number of rows and runs while it's less than size. 
+                The second loop determines the number of stars. Will run untill it's less then or equal to the previous loops control variable.
+                Checks before hand that the input is not 0, less than 0, or not a number.
+            */
+
+            var correctInput = false;
+            var message;
+            while (!correctInput) {
+                var size = prompt("Please enter the size of the triangle");
+                var message = "";
+                if (size == NaN) {
+                    alert("Please enter a valid character");
+                } else if (size <= 0) {
+                    alert("Number cannot be less than 0");
+                }
+                correctInput = true;
+            }
+
+            for (let x = 0; x < size; x++) {
+                for (let y = 0; y <= x; y++) {
+                    message += ("* ");
+                }
+                message += ("<br>");
+            }
+            document.write(message);
+
+        }
+
+        function diamond() {
+            /*
+            some code adapted from
+            Java program to Print Half Diamond Star Pattern. 
+            Tutorial Gateway. (2022, January 31). 
+            Retrieved June 10, 2022, 
+            from https://www.tutorialgateway.org/java-program-to-print-half-diamond-star-pattern/
+            First set of loops prints out a triangle like shape, runs untill x is no longer less than size. The second loop in the first set
+            runs as far as x has gone. As x goes up, so do the stars in each line. The second set of loops does the same, but in reverse.
+            Making the second half of the diamond.
+            Checks before hand that the input is not 0, less than 0, or not a number.
+            */
+            var correctInput = false;
+            var message;
+            while (!correctInput) {
+                var size = prompt("Please enter the size of the diamond");
+                var message = "";
+                if (size == NaN) {
+                    alert("Please enter a valid character");
+                } else if (size <= 0) {
+                    alert("Number cannot be less than 0");
+                }
+                correctInput = true;
+            }
+
+            for (let x = 0; x < size; x++) {
+                for (let y = 0; y < x + 1; y++) {
+                    message += ("*");
+                }
+                message += ("<br>");
+            }
+
+            for (let x = 1; x < size; x++) {
+                for (let y = x; y < size; y++) {
+                    message += ("*");
+                }
+                message += ("<br>");
+            }
+
+            document.write(message);
+
+        }
+
+        function hollowRectangle() {
+            /*
+            Some code adapted from
+            Program to print hollow rectangle or square star patterns. 
+            GeeksforGeeks. (2022, June 6). 
+            Retrieved June 10, 2022, 
+            from https://www.geeksforgeeks.org/program-to-print-hollow-rectangle-or-square-star-patterns/
+            The first loop controls the number of rows, and prints a line break when the second loop is done. It runs exactly 10 times.
+            The second loop runs as many times as the users input. It runs an if to check if x is 0, or if it is equal to 9. It checks the same for y.
+            If these critera are met, then it is the "roof" or the "floor" of the rectangle.
+            If it is not met, then it is an empty space to be filled with a dash. Once it is completed, the loop ends.
+            */
+            var correctInput = false;
+            var message = "";
+            var x = 0;
+            var y = 0;
+            while (!correctInput) {
+                var rows = 10;
+                var columns = prompt("Please enter the size of the rectangle");
+                var message = "";
+                if (rows == NaN) {
+                    alert("Please enter a valid character");
+                } else if (columns == NaN) {
+                    alert("Please enter a valid character");
+                } else if (rows <= 0) {
+                    alert("Number cannot be less than 0");
+                } else if (columns <= 0) {
+                    alert("Number cannot be less than 0");
+                }
+                correctInput = true;
+            }
+            for (x = 0; x < rows; x++) {
+                for (y = 0; y < columns; y++) {
+                    if (x == 0 || x == rows - 1 || y == 0 || y == columns - 1) {
+                        message += "*";
+                    } else {
+                        message += "-";
+                    }
+                }
+                message += "<br>";
+            }
+            document.write(message);
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <h1><b>Pattern Generator:</b></h1>
+    </div>
+
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">index.html</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Fibonacci.html">Fibonacci.html</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="pattern.html">Pattern.html</a>
+        </li>
+    </ul>
+
+    <div class="col-md-9">
+        <script type="text/javascript">
+            pickShape();			  
+        </script>
+    </div>
+
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <p>Footer</p>
+        <p>[041029720]</p>
+        <p>Spencer</p>
+        <p>LaBrie</p>
+        <p>labr0147@algonquinlive.com</p>
+    </div>
+
+</body>
+
+</html>
